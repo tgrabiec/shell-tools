@@ -11,4 +11,5 @@ if __name__ == "__main__":
     else:
         print "avg = %.2f" % numpy.mean(values)
         print "stdev = %.2f" % numpy.std(values)
+        print "sum = %.2f" % sum(values)
         print "samples = %d" % len(values)
