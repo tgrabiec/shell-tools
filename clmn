@@ -1,4 +1,14 @@
 #!/usr/bin/env bash
-column=$1
-awk "{print \$$column}"
+
+txt=""
+
+for c in $@; do
+    column=$c
+    if [ -n "$txt" ]; then
+        txt="$txt \" \""
+    fi
+    txt="$txt \$$column"
+done
+
+awk "{print $txt}"
 
